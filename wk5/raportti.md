@@ -217,6 +217,11 @@ Tarkistettiin `youtube.com` DNS-tiedot:
 - `MX`-tietue osoittaa Google SMTP -palvelimeen, joka hoitaa sähköpostiliikenteen.
 - IPv6 on käytössä, Google tukee molempia protokollia.
 
+Tarkistin vielä kaikkien näiden domainien nameserver tiedot `host -t NS` -komennolla
+![](kuvia/hostnameserver.png)
+
+Huomataan, että Youtubella on Googlen omat nameserverit. Omalla domainillani on namecheapin registrar-servers nameserver. Iltalehdellä taas toimii AWS nameserverinä.
+
 ---
 
 ## Ympäristötiedot
