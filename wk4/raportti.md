@@ -1,11 +1,13 @@
 # H4 Maailma kuulee
 
+Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotisivulta](https://terokarvinen.com/linux-palvelimet/)
+
 ## Tiivistelmät x)
 
-- Ehdotetaan käyttämään lukuisia erilaisia palvelun tarjoajia VPS:n hostaamiseen mm. DigitalOcea, Linode ja Gandi.
-- Palvelimelle yhdistäminen onnistuu komennolla `ssh root@[IP osoite]`
-- Palomuurin käyttöönotto ja konfigurointi yksinkertaisimmillaan: tehdään SSH-yhteydelle palomuuriin reikä `sudo ufw allow 22/tcp` ja sen jälkeen palomuuri päälle siten, että kaikki muut yhteydet kielletään `sudo ufw enable`
-- Ennen root-käyttäjän sulkemista pitää tehdä uusi käyttäjä, jolla hieman vähemmän oikeuksia
+- Ehdotetaan käyttämään lukuisia erilaisia palvelun tarjoajia VPS:n hostaamiseen mm. DigitalOcea, Linode ja Gandi.[^2]
+- Palvelimelle yhdistäminen onnistuu komennolla `ssh root@[IP osoite]`[^1]
+- Palomuurin käyttöönotto ja konfigurointi yksinkertaisimmillaan: tehdään SSH-yhteydelle palomuuriin reikä `sudo ufw allow 22/tcp` ja sen jälkeen palomuuri päälle siten, että kaikki muut yhteydet kielletään `sudo ufw enable`[^1][^2]
+- Ennen root-käyttäjän sulkemista pitää tehdä uusi käyttäjä, jolla hieman vähemmän oikeuksia[^1][^2]
   ```
   sudo adduser [käyttäjänimi]
   sudo adduser [käyttäjänimi] sudo
@@ -13,7 +15,7 @@
   sudo adduser [käyttäjänimi] admin
   ```
   jonka jälkeen on hyvä kokeilla onnistuuko SSH tällä uudella käyttäjällä palvelimelle `ssh [käyttäjänimi]@[IP osoite]`
-- Suljetaan root-käyttäjä komennoilla
+- Suljetaan root-käyttäjä komennoilla[^2]
   ```
   sudo usermod --lock root
   sudoedit /etc/ssh/sshd_config
@@ -22,12 +24,12 @@
   # ...
   sudo service ssh restart
   ```
-- Palvelinta kannattaa päivittää..
+- Palvelinta kannattaa päivittää..[^2]
   ```
   sudo apt-get update
   sudo apt-get upgrade
   ```
-- Jos haluat päästä palvelimelle myös http- ja https-yhteyksillä:
+- Jos haluat päästä palvelimelle myös http- ja https-yhteyksillä:[^2]
   ```
   sudo ufw allow 80/tcp
   sudo ufw allow 443/tcp

@@ -1,5 +1,7 @@
 # H5 Nimekäs
 
+Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotisivulta](https://terokarvinen.com/linux-palvelimet/)
+
 ## Oma kotisivu
 
 - a)

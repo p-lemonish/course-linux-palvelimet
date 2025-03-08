@@ -1,8 +1,10 @@
 # H2 kotiläksyt
 
+Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotisivulta](https://terokarvinen.com/linux-palvelimet/)
+
 ### Tiivistelmä
 
-Command line basics revisited -sivulla kerrotaan paljon hyödyllisiä komentoja niin Linux-ympäristön aloittelijalle, kuin harrastelijallekin. Alussa kirjoiteltiin ihan perusasioita, joilla pääsee alkuun Linuxin komentorivillä, kuten **pwd**, **ls** ja **cd**. Itselleni tuttua oli jo nämä edeltävät, sekä **pipe** ja **grep** -komennot, mutta uutena tuli **less** ja **nl** -vaihtoehdot.
+Command line basics revisited -sivulla[^1] kerrotaan paljon hyödyllisiä komentoja niin Linux-ympäristön aloittelijalle, kuin harrastelijallekin. Alussa kirjoiteltiin ihan perusasioita, joilla pääsee alkuun Linuxin komentorivillä, kuten **pwd**, **ls** ja **cd**. Itselleni tuttua oli jo nämä edeltävät, sekä **pipe** ja **grep** -komennot, mutta uutena tuli **less** ja **nl** -vaihtoehdot.
 
 Myöskin tosi hyödyllinen komento oli **history**, sillä olen monesti koittanut muistaa jotakin komentoa viikkojen takaa, ja käynyt sitä etsimässä kaikin muin keinoin. Tämähän helpottaa huomattavasti!
 
@@ -67,3 +69,5 @@ Myöskin tosi hyödyllinen komento oli **history**, sillä olen monesti koittanu
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
 ```
+
+[^1]: Command Line Basics Revisited, Tero Karvinen, https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited

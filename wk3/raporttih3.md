@@ -1,10 +1,12 @@
 # H3 hello web server
 
+Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotisivulta](https://terokarvinen.com/linux-palvelimet/)
+
 ### Tiivistelmät
 
-- **Name-Based Virtual Host**eilla voidaan hostata useampaa weppisivua siten, että jokaisella on sama IP-osoite.
-- Jokainen VirtualHost määritellään `<VirtualHost>`-blokilla, jossa domainille annetaan nimi **ServerName**:lla.
-- Jos pyyntö ei vastaa yhtäkään määriteltyä domainin nimeä, Apache palvelee ensimmäisen hostin, joka konfiguraatiosta löytyy. Suositeltavaa luoda siis defaultti, johon Apache voi ohjata ilman, että käyttäjä päätyy tälle tarkoittamattomalle sivulle.
+- **Name-Based Virtual Host**eilla voidaan hostata useampaa weppisivua siten, että jokaisella on sama IP-osoite[^1][^2].
+- Jokainen VirtualHost määritellään `<VirtualHost>`-blokilla, jossa domainille annetaan nimi **ServerName**:lla.[^2]
+- Jos pyyntö ei vastaa yhtäkään määriteltyä domainin nimeä, Apache palvelee ensimmäisen hostin, joka konfiguraatiosta löytyy.[^2] Suositeltavaa luoda siis defaultti, johon Apache voi ohjata ilman, että käyttäjä päätyy tälle tarkoittamattomalle sivulle.
 
 ### weppipalvelin
 
@@ -88,3 +90,6 @@ Komento **curl -I localhost** näyttää weppisivun "esitiedot"
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
 ```
+
+[^1]: Name-based Virtual Host Support, Apache, https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+[^2]: Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address, Tero Karvinen, 2018, https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/

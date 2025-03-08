@@ -1,5 +1,7 @@
 # H6 Salataampa
 
+Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotisivulta](https://terokarvinen.com/linux-palvelimet/)
+
 - x)
 
   > Tehtävänanto:
