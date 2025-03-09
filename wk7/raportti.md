@@ -14,10 +14,15 @@ Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotis
   ```
 
   Tehty `Hello.java` niminen tiedosto ja sinne sisään alla näkyvä teksti:
+
   ![](kuvat/hellojava.png)
+
   Java-tiedostot täytyy compileta, se onnistuu komennolla `javac Hello.java`, sen jälkeen juuri compiletun ohjelman voi ajaa komennolla `java Hello`, kuten alla näkyy:
+
   ![](kuvat/hellojava1.png)
+
   Tämän Python-komennon tein tunnin aikana, mutta siihen riittää, että kirjoittaa alla näkyvän `cat`-komennon tulosteen tiedostoon ja sen jälkeen ajaa sen oikeilla oikeuksilla (ks. c-kohta). Pythonilla riittäisi myös tehdä tiedosto nimeltä `hello.py` johon kirjoittaa `print("Hello world")` ja sitten ajaa se terminaalista komennolla `python3 hello.py`
+
   ![](kuvat/hellopython.png)
 
   Tässä tulee samalla nyt myös seuraava tehtävänanto, koska olin tunnilla tehnyt Python ja Java koodit hello worldille, mutta bash puuttui vielä, joten saan siinä kätevästi näytettyä kuinka komento tehdään ja saadaan suoritettavaksi kaikille käyttäjille.
@@ -28,14 +33,23 @@ Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotis
   > **Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä.**
 
   Tehty tiedosto `hellobash` ja sinne kirjoitettu seuraava teksti komennolla `vim hellobash`
+
   ![](kuvat/hellobash.png)
+
   `hellobash`-tiedosto luotu kotihakemistoon, sen jälkeen kokeiltu ajaa sitä, mutta tulee permission denied, eli tarvitaanvielä oikeuksia, mutta mitä oikeuksia?
+
   ![](kuvat/hellobash1.png)
+
   Tarkistetaan `hellobash` oikeudet seuraavalla komennolla `ls -l hellobash` ja huomataan, että se tarvitsee execute eli x -oikeudet.
+
   ![](kuvat/hellobash2.png)
+
   `chmod ugo+x hellobash` antaa kaikille käyttäjille execute -oikeudet hellobashille. Ajetaan `./hellobash` uudelleen
+
   ![](kuvat/hellobash3.png)
+
   Jotta ei tarvitsisi kirjoittaa `./` aina hellobashia ajaessa, voidaan siirtää se `/usr/local/bin`-hakemistoon, josta sen jälkeen komentoa voivat ajaa kaikki, eikä tarvitse olla `user`-nimisen käyttäjän kotihakemistossa sitä varten!
+
   ![](kuvat/hellobash4.png)
 
 - d)
@@ -104,9 +118,9 @@ Tehtävänannot kaikki löytyneet [Tero Karvisen Linux Palvelimet -kurssin kotis
   Varmistetaan, että apachella on käyttöoikeudet nähdä `index.html`:n sisältö, samalla varmistaen, että mihinkään muuhun tiedostoon muut eivät pääse käsiksi:
 
   ```
-  chmod go-rw /home/testiuseri/*
-  chmod ugo+rw /home/testiuseri
-  chmod ugo+rw /home/testiuseri/public_html
+  chmod go-rwx /home/testiuseri/*
+  chmod ugo+rx /home/testiuseri
+  chmod ugo+rx /home/testiuseri/public_html
   ```
 
   Potkaistaan demonia
